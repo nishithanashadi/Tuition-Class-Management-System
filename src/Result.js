@@ -22,7 +22,13 @@ const result = [
 
 const Result = () => {
     return (
-        <Box>
+        <Box
+        sx={{
+            width: 'calc(100%-100px)',
+            margin: 'auto',
+            marginTop: '100px',
+        }}
+        >
             <ResultForm/>
             <ResultTable rows={result} />
         </Box>

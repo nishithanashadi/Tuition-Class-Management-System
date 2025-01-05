@@ -1,5 +1,14 @@
 import { Button, Grid, Input, Typography } from "@mui/material";
+import { useState } from "react";
+
 const ResultForm = props => {
+
+    const [id, setid] = useState(0);
+    const [name, setName] = useState('');
+    const[subject, setSubject] = useState('');
+    const[grade, setGrade] = useState('');
+    const[status, setStatus] = useState('');
+
     return (
         <Grid
             container
@@ -33,8 +42,8 @@ const ResultForm = props => {
                     id='id'
                     name="id"
                     sx={{ width:'400px'}}
-                    value={''}
-                    onChange={e => {}}
+                    value={id}
+                    onChange={e => setid(e.target.value)}
                 />
             </Grid>
 
@@ -57,8 +66,8 @@ const ResultForm = props => {
                     id='name'
                     name="name"
                     sx={{ width:'400px'}}
-                    value={''}
-                    onChange={e => {}}
+                    value={name}
+                    onChange={e => setName(e.target.value)}
                 />
             </Grid>
 
@@ -81,8 +90,8 @@ const ResultForm = props => {
                     id='subject'
                     name="subject"
                     sx={{ width:'400px'}}
-                    value={''}
-                    onChange={e => {}}
+                    value={subject}
+                    onChange={e => setSubject(e.target.value)}
                 />
             </Grid>
 
@@ -105,8 +114,8 @@ const ResultForm = props => {
                     id='grade'
                     name="grade"
                     sx={{ width:'400px'}}
-                    value={''}
-                    onChange={e => {}}
+                    value={grade}
+                    onChange={e => setGrade(e.target.value)}
                 />
             </Grid>
 
@@ -129,8 +138,8 @@ const ResultForm = props => {
                     id='status'
                     name="status"
                     sx={{ width:'400px'}}
-                    value={''}
-                    onChange={e => {}}
+                    value={status}
+                    onChange={e => setStatus(e.target.value)}
                 />
             </Grid>
 

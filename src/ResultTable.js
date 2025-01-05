@@ -11,6 +11,7 @@ const ResultTable = ({rows}) => {
                     <TableCell>Subject Name</TableCell>
                     <TableCell>Grade</TableCell>
                     <TableCell>Status</TableCell>
+                    <TableCell>Action</TableCell>
                 </TableRow>
             </TableHead>
             <TableBody>
@@ -19,6 +20,9 @@ const ResultTable = ({rows}) => {
                         <TableRow key={row.id} sx={{ '&:last-child td, &:last-child th': { border: 0 }}}>
                             <TableCell component='th' scope="row">{row.id}</TableCell>
                             <TableCell component='th' scope="row">{row.name}</TableCell>
+                            <TableCell component='th' scope="row">{row.subject}</TableCell>
+                            <TableCell component='th' scope="row">{row.grade}</TableCell>
+                            <TableCell component='th' scope="row">{row.status}</TableCell>
                             <TableCell>
                                 <Button
                                     sx={{ margin: '0px 10px' }}
